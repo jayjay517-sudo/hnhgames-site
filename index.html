@@ -1,13 +1,16 @@
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>H&amp;H Games</title>
-<meta name="description" content="H&amp;H Games builds small, quiet games. No ads, no accounts, no tracking.">
-<link rel="icon" href="sudoku-icon.png">
+<meta name="description" content="H&amp;H Games">
+<link rel="icon" href="logo.png">
 <meta property="og:title" content="H&amp;H Games">
-<meta property="og:description" content="Small, quiet games. No ads, no accounts, no tracking.">
+ 
 <meta property="og:image" content="logo.png">
 <style>
   :root { color-scheme: light dark; }
@@ -38,8 +41,14 @@
     padding: 1.25rem; margin-bottom: 2.5rem;
   }
   .card img { width: 76px; height: 76px; border-radius: 17px; flex-shrink: 0; }
-  .card h3 { margin: 0 0 .2rem; font-size: 1.15rem; }
-  .card p { margin: .35rem 0 0; }
+  .card h3 { margin: 0 0 .2rem; font-size: 1.15rem; color: #000; font-weight: 600; }
+  @media (prefers-color-scheme: dark) {
+    .card h3 { color: #000; }
+  }
+  .card p { margin: .35rem 0 0; color: #2a4a3f; }
+  @media (prefers-color-scheme: dark) {
+    .card p { color: #b8dfd1; }
+  }
   .tag { display: inline-block; background: #dcf3e9; color: #14342b;
          font-size: .78rem; border-radius: 20px; padding: .15rem .6rem;
          vertical-align: 2px; margin-left: .4rem; }
@@ -53,16 +62,15 @@
 </style>
 </head>
 <body>
-
+ 
 <header>
   <img src="logo.png" alt="H&amp;H Games">
-  <p>Small, quiet games. No ads, no accounts, no tracking.</p>
 </header>
-
-<h2>Our apps</h2>
-
+ 
+<h2>Our games</h2>
+ 
 <div class="card">
-  <img src="sudoku-icon.png" alt="Sudoku Master icon">
+  <img src="sudoku/logo.png" alt="Sudoku Master icon">
   <div>
     <h3>Sudoku Master <span class="tag">iOS · Android</span></h3>
     <p>
@@ -72,36 +80,182 @@
       languages.
     </p>
     <p class="links">
-      <a href="privacy.html">Privacy policy</a>
-      <a href="support.html">Support &amp; FAQ</a>
+      <a href="sudoku/privacy.html">Privacy policy</a>
+      <a href="sudoku/support.html">Support &amp; FAQ</a>
     </p>
   </div>
 </div>
-
+ 
+<div class="card">
+  <img src="owldoku/logo.png" alt="Owldoku icon">
+  <div>
+    <h3>Owldoku <span class="tag">iOS · Android</span></h3>
+    <p>
+      A 614-level puzzle journey where each board builds a new solving technique.
+      Hints teach by example, not formula. The difficulty curve self-adjusts
+      based on what players struggle with. Fully offline, works in any language.
+    </p>
+    <p class="links">
+      <a href="owldoku/privacy.html">Privacy policy</a>
+    </p>
+  </div>
+</div>
+ 
 <h2>Contact</h2>
 <p>
   <a href="mailto:contact@hnhgames.com">contact@hnhgames.com</a>
 </p>
-
+ 
 <div class="ko">
   <h2>한국어</h2>
+ 
+  <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 .5rem;">스도쿠 마스터</h3>
   <p>
-    H&amp;H Games는 작고 조용한 게임을 만듭니다. 광고도, 계정도, 추적도 없습니다.
-  </p>
-  <p>
-    <strong>스도쿠 마스터</strong> — 여섯 단계 난이도, 메모와 힌트, 난이도별 통계를
-    갖춘 클래식 스도쿠입니다. 모든 퍼즐은 정답이 하나뿐인지 검증하므로 찍어야 하는
-    상황이 없습니다. 12개 언어를 지원하며 완전히 오프라인으로 작동합니다.
+    여섯 단계 난이도, 메모와 힌트, 난이도별 통계를 갖춘 클래식 스도쿠입니다.
+    모든 퍼즐은 정답이 하나뿐인지 검증하므로 찍어야 하는 상황이 없습니다.
+    12개 언어를 지원하며 완전히 오프라인으로 작동합니다.
   </p>
   <p class="links">
-    <a href="privacy.html">개인정보처리방침</a>
-    <a href="support.html">지원 및 FAQ</a>
+    <a href="sudoku/privacy.html">개인정보처리방침</a>
+    <a href="sudoku/support.html">지원 및 FAQ</a>
+  </p>
+ 
+  <h3 style="font-size: 1rem; font-weight: 600; margin: 1.5rem 0 .5rem;">Owldoku</h3>
+  <p>
+    614개 판으로 이루어진 난이도 여행. 각 판이 새로운 풀이 기법을 가르칩니다.
+    힌트는 공식이 아니라 예시로 알려줍니다. 난이도 곡선이 플레이어의 막히는 지점에
+    따라 스스로 조정됩니다. 완전히 오프라인, 모든 언어에서 작동합니다.
+  </p>
+  <p class="links">
+    <a href="owldoku/privacy.html">개인정보처리방침</a>
   </p>
 </div>
-
+ 
 <footer>
   © 2026 H&amp;H Games
 </footer>
-
+ 
 </body>
 </html>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
