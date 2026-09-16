@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Owldoku — Privacy Policy</title>
+<style>
+  :root{
+    --ink:#2A2722; --dim:#6E685C; --line:#DED9CB; --bg:#FBF9F3; --panel:#F4F1E9;
+    --accent:#9A7418;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#E9E8F2; --dim:#8A8FA8; --line:#2B3044; --bg:#12141C;
+           --panel:#171A25; --accent:#F2B441; }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    padding-block:40px; padding-left:20px; padding-right:20px;
+  }
+  main{max-width:68ch; margin:0 auto}
+  h1{font-size:26px; line-height:1.3; margin:0 0 6px}
+  .meta{color:var(--dim); font-size:14px; margin:0 0 26px}
+  h2{font-size:18px; margin:34px 0 10px; padding-top:18px; border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:none; padding-top:0}
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px; padding-left:22px}
+  li{margin-bottom:7px}
+  code{
+    background:var(--panel); border:1px solid var(--line); border-radius:4px;
+    padding:1px 5px; font-size:14px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  .lang{display:flex; gap:8px; margin-bottom:28px}
+  .lang button{
+    font:inherit; font-size:14px; padding:7px 15px; border-radius:20px; cursor:pointer;
+    border:1px solid var(--line); background:var(--panel); color:var(--dim);
+  }
+  .lang button[aria-pressed="true"]{
+    border-color:var(--accent); color:var(--ink); font-weight:600;
+  }
+  .note{
+    background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent);
+    border-radius:0 8px 8px 0; padding:14px 16px; margin:0 0 14px;
+  }
+  .note p:last-child{margin-bottom:0}
+  a{color:var(--accent)}
+  footer{margin-top:40px; padding-top:18px; border-top:1px solid var(--line);
+         color:var(--dim); font-size:14px}
+  [hidden]{display:none !important}
+</style>
+</head>
+<body>
+<main>
+  <div class="lang">
+    <button type="button" data-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
+  </div>
+
+  <!-- ─────────────── ENGLISH ─────────────── -->
+  <section id="en">
+    <h1>Owldoku — Privacy Policy</h1>
+    <p class="meta">Last updated: 16 September 2026 · H&amp;H Games (HNH CO., LTD.)</p>
+
+    <div class="note">
+      <p><strong>The short version.</strong> Owldoku does not ask for your name, your email,
+      or anything else that identifies you. If you allow it, the game sends anonymous notes
+      about which puzzles are hard — that is all. You can say no, and nothing about the game
+      changes.</p>
+    </div>
+
+    <h2>1. What we collect, and only if you agree</h2>
+    <p>The first time you open Owldoku, we ask whether you are willing to send usage data.
+    <strong>Until you say yes, nothing is sent.</strong> The app ships with collection
+    switched off, so this is true from the very first second the app runs, not just from the
+    moment you answer.</p>
+    <p>If you agree, the game records these events:</p>
+    <ul>
+      <li><code>level_start</code> — a puzzle was opened: its number, board size, difficulty,
+      and whether it was resumed rather than started fresh</li>
+      <li><code>level_end</code> — a puzzle was solved or lost: the same details plus time
+      taken, hints used, and mistakes made</li>
+      <li><code>level_quit</code> — a puzzle was left unfinished: time spent and how many
+      owls had been placed</li>
+      <li><code>hint_shown</code> / <code>hint_applied</code> — a hint was requested or used,
+      and which solving technique it involved</li>
+      <li><code>stuck</code> — the game noticed you had paused for a long while on a puzzle</li>
+      <li><code>chapter_done</code> — a chapter of ten puzzles was completed</li>
+    </ul>
+    <p>Alongside these, Google Analytics for Firebase automatically records a randomly
+    generated app instance identifier, your device model and operating system version, your
+    app version, your language setting, and a country derived from your IP address. Your IP
+    address itself is not stored.</p>
+
+    <h2>2. What we never collect</h2>
+    <ul>
+      <li>Your name, email address, phone number, or any account</li>
+      <li>Your advertising identifier — we switch this off at build time</li>
+      <li>Your precise location</li>
+      <li>Contacts, photos, files, or anything else on your device</li>
+      <li>Anything you type</li>
+    </ul>
+    <p>Owldoku has no accounts, no social features, and no way for anyone to identify you
+    from the data above.</p>
+
+    <h2>3. Why we collect it</h2>
+    <p>Owldoku has 614 puzzles arranged so that each one builds on a technique taught by the
+    ones before it. That ordering is our best guess, and a puzzle placed too early is
+    indistinguishable, from the outside, from a puzzle that is simply unfair. Knowing which
+    technique players actually needed help with, and where, is how we correct the difficulty
+    curve. It is used for nothing else.</p>
+
+    <h2>4. Who processes it</h2>
+    <p>Data is processed by Google LLC through Google Analytics for Firebase, acting as our
+    processor. This means it is stored on Google's servers, which are located outside the
+    Republic of Korea and may be outside your own country. Google's handling of this data is
+    described in the
+    <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Privacy
+    and Security</a> documentation.</p>
+    <p>We do not sell data, and we do not share it with advertisers or any other third party.</p>
+
+    <h2>5. How long it is kept</h2>
+    <p>Event data is deleted automatically according to the retention period set in our
+    Firebase project. Aggregate statistics — counts and averages that describe no individual —
+    may be kept without a time limit.</p>
+
+    <h2>6. Your choices</h2>
+    <p>You can change your mind at any time: open <strong>Settings</strong> in the game and
+    switch <strong>Usage statistics</strong> off. Collection stops immediately, including the
+    automatic events described in section 1.</p>
+    <p>Declining, or later switching it off, changes nothing about the game. Every puzzle,
+    every feature, and every hint stays available. We do not ask again.</p>
+    <p>If you are in the European Economic Area or the United Kingdom, our legal basis is
+    your consent (GDPR Art. 6(1)(a)), and you may withdraw it as described above. You also
+    have the right to request access to, correction of, or deletion of your data, and to
+    lodge a complaint with your supervisory authority. Because we hold no identifier that
+    connects the data to you personally, we may be unable to locate your specific records —
+    in that case, switching collection off stops any further data being sent.</p>
+
+    <h2>7. Children</h2>
+    <p>Owldoku is not directed at children under 13, and we do not knowingly collect data
+    from them. If you believe a child has sent us data, contact us and we will remove what we
+    can identify.</p>
+
+    <h2>8. Changes</h2>
+    <p>If we change what we collect, we will update this page and, where the change is
+    significant, ask again inside the app.</p>
+
+    <h2>9. Contact</h2>
+    <p>H&amp;H Games (HNH CO., LTD.)<br>
+    <a href="mailto:contact@hnhgames.com">contact@hnhgames.com</a></p>
+  </section>
+
+  <!-- ─────────────── 한국어 ─────────────── -->
+  <section id="ko" hidden>
+    <h1>Owldoku — 개인정보 처리방침</h1>
+    <p class="meta">최종 수정일: 2026년 9월 16일 · H&amp;H Games (HNH CO., LTD.)</p>
+
+    <div class="note">
+      <p><strong>요약.</strong> Owldoku는 이름도, 이메일도, 이용자를 알아볼 수 있는 어떤 정보도
+      요구하지 않습니다. 동의하시면 어떤 판이 어려웠는지에 대한 익명 기록만 보냅니다.
+      동의하지 않으셔도 게임은 전부 그대로입니다.</p>
+    </div>
+
+    <h2>1. 동의하신 경우에만 수집하는 것</h2>
+    <p>Owldoku를 처음 실행하면 사용 통계를 보내도 되는지 여쭙습니다.
+    <strong>동의하시기 전까지는 아무것도 전송되지 않습니다.</strong> 앱 자체가 수집이 꺼진
+    상태로 배포되므로, 답변하신 시점부터가 아니라 앱이 실행되는 첫 순간부터 그렇습니다.</p>
+    <p>동의하시면 다음 항목이 기록됩니다.</p>
+    <ul>
+      <li><code>level_start</code> — 판을 열었을 때: 판 번호, 판 크기, 난이도, 새로 시작인지
+      이어하기인지</li>
+      <li><code>level_end</code> — 판을 풀었거나 실패했을 때: 위 정보와 소요 시간, 사용한 힌트 수,
+      실수 횟수</li>
+      <li><code>level_quit</code> — 판을 끝내지 않고 나갔을 때: 머문 시간과 놓은 부엉이 수</li>
+      <li><code>hint_shown</code> / <code>hint_applied</code> — 힌트를 열었거나 적용했을 때와
+      그 힌트가 어떤 풀이 기법이었는지</li>
+      <li><code>stuck</code> — 한 판에서 오래 멈춰 있었다고 게임이 판단했을 때</li>
+      <li><code>chapter_done</code> — 열 판짜리 구역을 완료했을 때</li>
+    </ul>
+    <p>이와 함께 Google Analytics for Firebase가 무작위로 생성된 앱 인스턴스 식별자, 기기 모델과
+    운영체제 버전, 앱 버전, 언어 설정, IP 주소로부터 추정한 국가를 자동으로 기록합니다.
+    IP 주소 자체는 저장되지 않습니다.</p>
+
+    <h2>2. 수집하지 않는 것</h2>
+    <ul>
+      <li>이름, 이메일, 전화번호, 계정 정보</li>
+      <li>광고 식별자 — 빌드 단계에서 꺼둡니다</li>
+      <li>정확한 위치</li>
+      <li>연락처, 사진, 파일 등 기기에 있는 다른 정보</li>
+      <li>입력하신 내용</li>
+    </ul>
+    <p>Owldoku에는 계정도, 소셜 기능도 없으며, 위 정보만으로 특정 개인을 알아볼 수 없습니다.</p>
+
+    <h2>3. 수집하는 이유</h2>
+    <p>Owldoku의 614개 판은 앞선 판이 가르친 기법 위에 다음 판이 쌓이도록 배열되어 있습니다.
+    이 배열은 저희의 추정이고, 너무 이르게 놓인 판은 밖에서 보면 그저 불합리한 판과
+    구분되지 않습니다. 이용자가 실제로 어느 지점에서 어떤 기법에 막혔는지를 알아야
+    난이도 곡선을 바로잡을 수 있습니다. 그 외의 용도로는 쓰지 않습니다.</p>
+
+    <h2>4. 처리 위탁</h2>
+    <p>수집된 정보는 Google LLC가 Google Analytics for Firebase를 통해 수탁 처리합니다.
+    따라서 대한민국 밖, 경우에 따라 이용자가 계신 국가 밖에 있는 Google 서버에 저장됩니다.
+    Google의 처리 방식은
+    <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase 개인정보
+    및 보안</a> 문서에 설명되어 있습니다.</p>
+    <p>저희는 정보를 판매하지 않으며, 광고주나 제3자에게 제공하지 않습니다.</p>
+
+    <h2>5. 보관 기간</h2>
+    <p>이벤트 정보는 Firebase 프로젝트에 설정된 보존 기간에 따라 자동 삭제됩니다.
+    개인을 나타내지 않는 집계 통계(건수·평균 등)는 기간 제한 없이 보관될 수 있습니다.</p>
+
+    <h2>6. 이용자의 선택</h2>
+    <p>언제든 바꾸실 수 있습니다. 게임 안에서 <strong>설정</strong>을 열고
+    <strong>사용 통계</strong>를 끄시면 됩니다. 1항의 자동 기록을 포함해 수집이 즉시 중단됩니다.</p>
+    <p>동의하지 않으시거나 나중에 끄셔도 게임은 달라지지 않습니다. 모든 판, 모든 기능,
+    모든 힌트를 그대로 이용하실 수 있습니다. 다시 여쭙지 않습니다.</p>
+    <p>유럽경제지역 또는 영국에 계신 경우 처리의 법적 근거는 이용자의 동의(GDPR 제6조
+    제1항 (a))이며, 위 방법으로 철회하실 수 있습니다. 또한 열람·정정·삭제를 요청하실 권리와
+    감독기관에 민원을 제기하실 권리가 있습니다. 다만 저희는 정보를 개인과 연결할 수 있는
+    식별자를 보유하지 않으므로 특정 이용자의 기록을 찾지 못할 수 있으며, 그 경우 수집을
+    끄시면 이후 전송이 중단됩니다.</p>
+
+    <h2>7. 아동</h2>
+    <p>Owldoku는 만 13세 미만 아동을 대상으로 하지 않으며, 아동의 정보를 알면서 수집하지
+    않습니다. 아동이 정보를 보냈다고 판단되시면 연락 주시기 바랍니다. 확인 가능한 범위에서
+    삭제하겠습니다.</p>
+
+    <h2>8. 변경</h2>
+    <p>수집 항목이 달라지면 이 페이지를 갱신하고, 변경이 중대한 경우 앱 안에서 다시 여쭙겠습니다.</p>
+
+    <h2>9. 문의</h2>
+    <p>H&amp;H Games (HNH CO., LTD.)<br>
+    <a href="mailto:contact@hnhgames.com">contact@hnhgames.com</a></p>
+  </section>
+
+  <footer>© 2026 HNH CO., LTD.</footer>
+</main>
+
+<script>
+  const buttons = document.querySelectorAll(".lang button");
+  function show(lang){
+    document.getElementById("en").hidden = lang !== "en";
+    document.getElementById("ko").hidden = lang !== "ko";
+    document.documentElement.lang = lang;
+    buttons.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    try { localStorage.setItem("owldoku.privacy.lang", lang); } catch {}
+  }
+  buttons.forEach(b => b.addEventListener("click", () => show(b.dataset.lang)));
+  let start = "en";
+  try { start = localStorage.getItem("owldoku.privacy.lang") || start; } catch {}
+  if (start !== "ko" && start !== "en") start = "en";
+  if (start === "en" && (navigator.language || "").toLowerCase().startsWith("ko")) start = "ko";
+  show(start);
+</script>
+</body>
+</html>
