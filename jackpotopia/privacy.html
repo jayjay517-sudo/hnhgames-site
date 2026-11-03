@@ -65,16 +65,28 @@
     <div class="note">
       <p><strong>The short version.</strong> Jackpotopia has no accounts and does not ask for
       your name, email or anything else that identifies you. Your coins and progress stay on
-      your device. If you allow it, the game sends anonymous gameplay statistics so we can
+      your device unless you choose to sign in to save them. If you allow it, the game sends anonymous gameplay statistics so we can
       balance it. You can say no, and nothing about the game changes.</p>
     </div>
 
-    <h2>1. Your game data stays on your device</h2>
+    <h2>1. Your game data is stored on your device</h2>
     <p>Your coins, level, bonuses and settings are saved on your device only. They are not
-    sent to us. If your device backs up apps (iCloud or Google backup), this save may be
+    sent to us unless you sign in (section 2). If your device backs up apps (iCloud or Google backup), this save may be
     included in that backup under your own Apple or Google account.</p>
 
-    <h2>2. Gameplay statistics — only if you agree</h2>
+    <h2>2. Saving your progress — only if you sign in</h2>
+    <p>Signing in is optional. If you tap <strong>Sign in with Google</strong> (Android) or
+    <strong>Sign in with Apple</strong> (iPhone and iPad) in Settings, we create an account in Firebase
+    Authentication and keep a copy of your game progress — the values listed in section 1 — in Cloud
+    Firestore, so you can continue on another device. The copy is updated while you play.</p>
+    <p>The account holds a random user ID, the sign-in method, and the details your sign-in provider shares:
+    with Google, your name, email address and profile picture; with Apple, nothing beyond the user ID,
+    because we do not request your name or email. We use these only to sign you in and restore your
+    progress, and never for advertising.</p>
+    <p>You can sign out at any time. <strong>Settings → Delete account</strong> deletes the saved copy and
+    the account; the progress on your device stays, and you keep playing as a guest.</p>
+
+    <h2>3. Gameplay statistics — only if you agree</h2>
     <p>The first time you open Jackpotopia, we ask whether you are willing to share anonymous
     gameplay data. <strong>Until you say yes, nothing is sent.</strong> The app ships with
     collection switched off, so this is true from the very first second the app runs.</p>
@@ -102,14 +114,14 @@
     version, app version, language setting, and a country derived from your IP address. Your
     IP address itself is not stored.</p>
 
-    <h2>3. Purchases</h2>
+    <h2>4. Purchases</h2>
     <p>Coin purchases are handled entirely by Apple (App Store) or Google (Google Play). We never
     see your name, payment card or billing address. The store tells the app which product was
     bought and gives it a transaction number; the app uses these only to deliver your coins and
     to make sure a purchase is not delivered twice. Recent transaction numbers are kept on your
     device for that purpose.</p>
 
-    <h2>4. Region check before purchases</h2>
+    <h2>5. Region check before purchases</h2>
     <p>Coin purchases are not available in some places (currently the U.S. state of Washington).
     When you open the coin store and your store account is set to the United States, the app
     asks our server, run on Cloudflare Workers, for the country and state of your connection.
@@ -118,27 +130,28 @@
     whether or not you agreed to gameplay statistics, because it is needed to follow the law;
     it does not run for store accounts outside the United States.</p>
 
-    <h2>5. What we never collect</h2>
+    <h2>6. What we never collect</h2>
     <ul>
-      <li>Your name, email address, phone number, or any account</li>
+      <li>Your phone number — and nothing about you at all unless you choose to sign in (section 2)</li>
       <li>Your advertising identifier — we switch it off at build time, and the game has no ads</li>
       <li>Your precise location</li>
       <li>Contacts, photos, files, or anything else on your device</li>
     </ul>
     <p>We do not sell data, and we do not share it with advertisers.</p>
 
-    <h2>6. Who processes it</h2>
+    <h2>7. Who processes it</h2>
     <p>Gameplay statistics are processed by Google LLC through Google Analytics for Firebase,
-    acting as our processor (<a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase
+    and sign-in and saved progress through Firebase Authentication and Cloud Firestore, acting as our processor (<a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase
     Privacy and Security</a>). The region check is processed by Cloudflare, Inc.
     (<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare Privacy Policy</a>).
     Both may process data on servers outside the Republic of Korea and outside your own country.</p>
 
-    <h2>7. How long it is kept</h2>
-    <p>Gameplay event data is deleted automatically after 14 months. Aggregate statistics —
+    <h2>8. How long it is kept</h2>
+    <p>Saved progress and your account are kept until you delete them in Settings or ask us to.
+    Gameplay event data is deleted automatically after 14 months. Aggregate statistics —
     counts and averages that describe no individual — may be kept without a time limit.</p>
 
-    <h2>8. Your choices</h2>
+    <h2>9. Your choices</h2>
     <p>You can change your mind at any time: open a machine, tap <strong>Info</strong>, and switch
     <strong>Share gameplay data</strong> off. Collection stops immediately. Declining changes
     nothing about the game.</p>
@@ -151,16 +164,16 @@
     collection off stops anything further from being sent. California residents: we do not
     sell or share personal information as those terms are defined in the CCPA.</p>
 
-    <h2>9. Age</h2>
+    <h2>10. Age</h2>
     <p>Jackpotopia is a social casino game intended for adults (18+). It is not directed to
     children, and we do not knowingly collect data from children. If you believe a child has
     sent us data, please contact us and we will delete what we can identify.</p>
 
-    <h2>10. Changes</h2>
+    <h2>11. Changes</h2>
     <p>If what we collect changes, we will update this page, and if the change is significant we
     will ask you again in the game.</p>
 
-    <h2>11. Contact</h2>
+    <h2>12. Contact</h2>
     <p>H&amp;H Games (HNH CO., LTD.), Republic of Korea<br>
     <a href="mailto:contact@hnhgames.com">contact@hnhgames.com</a></p>
   </section>
@@ -172,16 +185,26 @@
 
     <div class="note">
       <p><strong>요약.</strong> Jackpotopia에는 계정이 없고, 이름·이메일 등 이용자를 알아볼 수 있는
-      정보를 묻지 않습니다. 코인과 진행 상황은 기기에만 저장됩니다. 동의하시는 경우에만 게임 밸런스를
+      정보를 묻지 않습니다. 코인과 진행 상황은 직접 로그인해 저장하지 않는 한 기기에만 저장됩니다. 동의하시는 경우에만 게임 밸런스를
       맞추기 위한 익명 플레이 통계를 보냅니다. 거절하셔도 게임은 똑같이 이용하실 수 있습니다.</p>
     </div>
 
-    <h2>1. 게임 데이터는 기기에만 저장됩니다</h2>
-    <p>코인, 레벨, 보너스, 설정은 이용자 기기에만 저장되며 저희에게 전송되지 않습니다. 기기가 앱을
+    <h2>1. 게임 데이터는 기기에 저장됩니다</h2>
+    <p>코인, 레벨, 보너스, 설정은 이용자 기기에 저장되며, 로그인하지 않으시면(2번) 저희에게 전송되지 않습니다. 기기가 앱을
     백업하는 경우(iCloud 또는 Google 백업) 이 저장 내용이 이용자 본인의 Apple·Google 계정 백업에
     포함될 수 있습니다.</p>
 
-    <h2>2. 플레이 통계 — 동의하신 경우에만</h2>
+    <h2>2. 진행 저장 — 로그인하신 경우에만</h2>
+    <p>로그인은 선택입니다. 설정에서 <strong>Sign in with Google</strong>(안드로이드) 또는 <strong>Sign in with
+    Apple</strong>(아이폰·아이패드)을 누르시면 Firebase Authentication에 계정을 만들고, 다른 기기에서 이어 하실 수
+    있도록 게임 진행(1번의 값들)의 사본을 Cloud Firestore에 보관합니다. 사본은 플레이하시는 동안 갱신됩니다.</p>
+    <p>계정에는 무작위 사용자 ID, 로그인 방식, 로그인 제공자가 넘겨주는 정보가 담깁니다. Google은 이름·이메일
+    주소·프로필 사진, Apple은 이름과 이메일을 요청하지 않으므로 사용자 ID 외에는 없습니다. 이 정보는 로그인과 진행
+    복원에만 쓰며 광고에는 절대 쓰지 않습니다.</p>
+    <p>언제든 로그아웃하실 수 있습니다. <strong>설정 → Delete account</strong>를 누르시면 저장된 사본과 계정이
+    삭제되며, 기기의 진행은 그대로 남아 손님으로 계속 하실 수 있습니다.</p>
+
+    <h2>3. 플레이 통계 — 동의하신 경우에만</h2>
     <p>Jackpotopia를 처음 여실 때 익명 플레이 데이터 공유 여부를 여쭙습니다. <strong>동의하시기
     전에는 아무것도 전송되지 않습니다.</strong> 앱은 수집이 꺼진 상태로 배포되므로 앱이 실행되는
     첫 순간부터 이 원칙이 적용됩니다.</p>
@@ -200,39 +223,40 @@
     인스턴스 식별자, 기기 모델·운영체제 버전, 앱 버전, 언어 설정, IP 주소로 추정한 국가를 기록합니다.
     IP 주소 자체는 저장하지 않습니다.</p>
 
-    <h2>3. 구매</h2>
+    <h2>4. 구매</h2>
     <p>코인 구매는 전적으로 Apple(App Store) 또는 Google(Google Play)이 처리합니다. 저희는 이름,
     결제 카드, 청구지 주소를 볼 수 없습니다. 스토어는 앱에 구매한 상품과 거래 번호만 알려주며, 앱은
     이를 코인 지급과 중복 지급 방지에만 씁니다. 이를 위해 최근 거래 번호를 기기에 보관합니다.</p>
 
-    <h2>4. 구매 전 지역 확인</h2>
+    <h2>5. 구매 전 지역 확인</h2>
     <p>코인 구매는 일부 지역(현재 미국 워싱턴주)에서 이용하실 수 없습니다. 코인 상점을 여실 때 스토어
     계정 국가가 미국이면, 앱이 Cloudflare Workers에서 운영하는 저희 서버에 접속 위치의 국가와 주를
     묻습니다. 서버는 IP 주소로 이를 판단해 국가와 주만 돌려주며 아무것도 저장하지 않습니다. 결과는 기기에
     24시간 보관됩니다. 이 확인은 법을 지키기 위해 필요하므로 플레이 통계 동의 여부와 관계없이 이루어지며,
     미국 외 스토어 계정에서는 이루어지지 않습니다.</p>
 
-    <h2>5. 절대 수집하지 않는 것</h2>
+    <h2>6. 절대 수집하지 않는 것</h2>
     <ul>
-      <li>이름, 이메일 주소, 전화번호, 계정</li>
+      <li>전화번호 — 그리고 직접 로그인하지 않으시면(2번) 이용자에 관한 어떤 정보도</li>
       <li>광고 식별자 — 빌드 단계에서 끄며, 게임에 광고가 없습니다</li>
       <li>정확한 위치</li>
       <li>연락처, 사진, 파일 등 기기 안의 다른 정보</li>
     </ul>
     <p>저희는 데이터를 판매하지 않으며 광고주와 공유하지 않습니다.</p>
 
-    <h2>6. 처리 위탁</h2>
-    <p>플레이 통계는 수탁자인 Google LLC가 Google Analytics for Firebase를 통해 처리합니다
+    <h2>7. 처리 위탁</h2>
+    <p>플레이 통계는 수탁자인 Google LLC가 Google Analytics for Firebase를 통해, 로그인과 진행 저장은 Firebase
+    Authentication과 Cloud Firestore를 통해 처리합니다
     (<a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase 개인정보 보호 및 보안</a>).
     지역 확인은 Cloudflare, Inc.가 처리합니다
     (<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare 개인정보처리방침</a>).
     두 회사 모두 대한민국 및 이용자 국가 밖의 서버에서 데이터를 처리할 수 있습니다.</p>
 
-    <h2>7. 보관 기간</h2>
-    <p>플레이 이벤트 데이터는 14개월 뒤 자동으로 삭제됩니다. 특정 개인을 나타내지 않는 집계 통계(횟수,
+    <h2>8. 보관 기간</h2>
+    <p>저장된 진행과 계정은 설정에서 삭제하시거나 요청하실 때까지 보관합니다. 플레이 이벤트 데이터는 14개월 뒤 자동으로 삭제됩니다. 특정 개인을 나타내지 않는 집계 통계(횟수,
     평균 등)는 기한 없이 보관할 수 있습니다.</p>
 
-    <h2>8. 이용자의 선택</h2>
+    <h2>9. 이용자의 선택</h2>
     <p>언제든 바꾸실 수 있습니다. 머신을 열고 <strong>Info</strong>를 눌러 <strong>Share gameplay
     data</strong>를 끄시면 즉시 수집이 멈춥니다. 거절하셔도 게임에는 아무 변화가 없습니다.</p>
     <p>유럽경제지역 또는 영국에 계신 경우 플레이 통계 처리의 법적 근거는 이용자의 동의(GDPR 제6조
@@ -242,15 +266,15 @@
     이용자의 기록을 찾지 못할 수 있으며, 그 경우 수집을 끄시면 이후 전송이 중단됩니다. 캘리포니아 주민께:
     저희는 CCPA에서 정의하는 개인정보의 판매 또는 공유를 하지 않습니다.</p>
 
-    <h2>9. 연령</h2>
+    <h2>10. 연령</h2>
     <p>Jackpotopia는 성인(만 18세 이상)을 위한 소셜 카지노 게임입니다. 아동을 대상으로 하지 않으며
     아동의 정보를 알면서 수집하지 않습니다. 아동이 정보를 보냈다고 판단되시면 연락 주시기 바랍니다.
     확인 가능한 범위에서 삭제하겠습니다.</p>
 
-    <h2>10. 변경</h2>
+    <h2>11. 변경</h2>
     <p>수집 항목이 달라지면 이 페이지를 갱신하고, 변경이 중대한 경우 게임 안에서 다시 여쭙겠습니다.</p>
 
-    <h2>11. 문의</h2>
+    <h2>12. 문의</h2>
     <p>H&amp;H Games (HNH CO., LTD.), 대한민국<br>
     <a href="mailto:contact@hnhgames.com">contact@hnhgames.com</a></p>
   </section>
