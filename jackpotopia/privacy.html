@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jackpotopia — Privacy Policy</title>
+<style>
+  :root{
+    --ink:#2A2722; --dim:#6E685C; --line:#DED9CB; --bg:#FBF9F3; --panel:#F4F1E9;
+    --accent:#9A7418;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#E9E8F2; --dim:#8A8FA8; --line:#2B3044; --bg:#12141C;
+           --panel:#171A25; --accent:#F2B441; }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    padding-block:40px; padding-left:20px; padding-right:20px;
+  }
+  main{max-width:68ch; margin:0 auto}
+  h1{font-size:26px; line-height:1.3; margin:0 0 6px}
+  .meta{color:var(--dim); font-size:14px; margin:0 0 26px}
+  h2{font-size:18px; margin:34px 0 10px; padding-top:18px; border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:none; padding-top:0}
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px; padding-left:22px}
+  li{margin-bottom:7px}
+  code{
+    background:var(--panel); border:1px solid var(--line); border-radius:4px;
+    padding:1px 5px; font-size:14px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  .lang{display:flex; gap:8px; margin-bottom:28px}
+  .lang button{
+    font:inherit; font-size:14px; padding:7px 15px; border-radius:20px; cursor:pointer;
+    border:1px solid var(--line); background:var(--panel); color:var(--dim);
+  }
+  .lang button[aria-pressed="true"]{
+    border-color:var(--accent); color:var(--ink); font-weight:600;
+  }
+  .note{
+    background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent);
+    border-radius:0 8px 8px 0; padding:14px 16px; margin:0 0 14px;
+  }
+  .note p:last-child{margin-bottom:0}
+  a{color:var(--accent)}
+  footer{margin-top:40px; padding-top:18px; border-top:1px solid var(--line);
+         color:var(--dim); font-size:14px}
+  [hidden]{display:none !important}
+</style>
+</head>
+<body>
+<main>
+  <div class="lang">
+    <button type="button" data-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
+  </div>
+
+  <!-- ─────────────── ENGLISH ─────────────── -->
+  <section id="en">
+    <h1>Jackpotopia — Privacy Policy</h1>
+    <p class="meta">Last updated: 3 November 2026 · H&amp;H Games (HNH CO., LTD.)</p>
+
+    <div class="note">
+      <p><strong>The short version.</strong> Jackpotopia has no accounts and does not ask for
+      your name, email or anything else that identifies you. Your coins and progress stay on
+      your device. If you allow it, the game sends anonymous gameplay statistics so we can
+      balance it. You can say no, and nothing about the game changes.</p>
+    </div>
+
+    <h2>1. Your game data stays on your device</h2>
+    <p>Your coins, level, bonuses and settings are saved on your device only. They are not
+    sent to us. If your device backs up apps (iCloud or Google backup), this save may be
+    included in that backup under your own Apple or Google account.</p>
+
+    <h2>2. Gameplay statistics — only if you agree</h2>
+    <p>The first time you open Jackpotopia, we ask whether you are willing to share anonymous
+    gameplay data. <strong>Until you say yes, nothing is sent.</strong> The app ships with
+    collection switched off, so this is true from the very first second the app runs.</p>
+    <p>If you agree, the game records these events:</p>
+    <ul>
+      <li><code>spin_batch</code> — a summary of every 25 spins: total bet, total win, average
+      and largest win, coin balance, level and machine</li>
+      <li><code>coins_earned</code> — free or bought coins received, and from where (time bonus,
+      daily bonus, level-up reward, refill, purchase)</li>
+      <li><code>balance_zero</code> — your coins ran out: level, number of spins, and minutes
+      since you installed the game</li>
+      <li><code>store_open</code>, <code>offer_view</code>, <code>offer_tap</code> — the coin
+      store was opened, which offers were shown, and which one you tapped</li>
+      <li><code>iap_success</code> / <code>iap_fail</code> — a coin purchase completed (product
+      and coins delivered) or did not (cancelled, error, or not available in your region)</li>
+      <li><code>bet_change</code>, <code>machine_open</code>, <code>level_up</code> — bet size
+      changes, which machine you opened, and level-ups</li>
+      <li>which screen you are on (lobby, machine, store), your level band (for example
+      &ldquo;5–9&rdquo;) and whether you have ever made a purchase</li>
+    </ul>
+    <p>Alongside these, Google Analytics for Firebase records a few standard events of its own
+    — the first launch, the start of a session, time spent in the app, and completed in-app
+    purchases (product, price and currency, as reported by the App Store or Google Play) — and a
+    randomly generated app instance identifier, your device model and operating system
+    version, app version, language setting, and a country derived from your IP address. Your
+    IP address itself is not stored.</p>
+
+    <h2>3. Purchases</h2>
+    <p>Coin purchases are handled entirely by Apple (App Store) or Google (Google Play). We never
+    see your name, payment card or billing address. The store tells the app which product was
+    bought and gives it a transaction number; the app uses these only to deliver your coins and
+    to make sure a purchase is not delivered twice. Recent transaction numbers are kept on your
+    device for that purpose.</p>
+
+    <h2>4. Region check before purchases</h2>
+    <p>Coin purchases are not available in some places (currently the U.S. state of Washington).
+    When you open the coin store and your store account is set to the United States, the app
+    asks our server, run on Cloudflare Workers, for the country and state of your connection.
+    The server works this out from your IP address, returns only the country and state, and
+    does not store anything. The answer is kept on your device for 24 hours. This check runs
+    whether or not you agreed to gameplay statistics, because it is needed to follow the law;
+    it does not run for store accounts outside the United States.</p>
+
+    <h2>5. What we never collect</h2>
+    <ul>
+      <li>Your name, email address, phone number, or any account</li>
+      <li>Your advertising identifier — we switch it off at build time, and the game has no ads</li>
+      <li>Your precise location</li>
+      <li>Contacts, photos, files, or anything else on your device</li>
+    </ul>
+    <p>We do not sell data, and we do not share it with advertisers.</p>
+
+    <h2>6. Who processes it</h2>
+    <p>Gameplay statistics are processed by Google LLC through Google Analytics for Firebase,
+    acting as our processor (<a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase
+    Privacy and Security</a>). The region check is processed by Cloudflare, Inc.
+    (<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare Privacy Policy</a>).
+    Both may process data on servers outside the Republic of Korea and outside your own country.</p>
+
+    <h2>7. How long it is kept</h2>
+    <p>Gameplay event data is deleted automatically after 14 months. Aggregate statistics —
+    counts and averages that describe no individual — may be kept without a time limit.</p>
+
+    <h2>8. Your choices</h2>
+    <p>You can change your mind at any time: open a machine, tap <strong>Info</strong>, and switch
+    <strong>Share gameplay data</strong> off. Collection stops immediately. Declining changes
+    nothing about the game.</p>
+    <p>If you are in the European Economic Area or the United Kingdom, the legal basis for
+    gameplay statistics is your consent (GDPR Article 6(1)(a)), which you can withdraw as above;
+    the region check relies on our legal obligations and legitimate interest in complying with
+    local law (Article 6(1)(c) and (f)). You have the right to access, correct or delete your
+    data and to complain to a supervisory authority. Because we hold no identifier that links
+    data to you as a person, we may not be able to find a specific player's records; switching
+    collection off stops anything further from being sent. California residents: we do not
+    sell or share personal information as those terms are defined in the CCPA.</p>
+
+    <h2>9. Age</h2>
+    <p>Jackpotopia is a social casino game intended for adults (18+). It is not directed to
+    children, and we do not knowingly collect data from children. If you believe a child has
+    sent us data, please contact us and we will delete what we can identify.</p>
+
+    <h2>10. Changes</h2>
+    <p>If what we collect changes, we will update this page, and if the change is significant we
+    will ask you again in the game.</p>
+
+    <h2>11. Contact</h2>
+    <p>H&amp;H Games (HNH CO., LTD.), Republic of Korea<br>
+    <a href="mailto:contact@hnhgames.com">contact@hnhgames.com</a></p>
+  </section>
+
+  <!-- ─────────────── 한국어 ─────────────── -->
+  <section id="ko" hidden>
+    <h1>Jackpotopia — 개인정보처리방침</h1>
+    <p class="meta">최종 수정: 2026년 11월 3일 · H&amp;H Games (HNH CO., LTD.)</p>
+
+    <div class="note">
+      <p><strong>요약.</strong> Jackpotopia에는 계정이 없고, 이름·이메일 등 이용자를 알아볼 수 있는
+      정보를 묻지 않습니다. 코인과 진행 상황은 기기에만 저장됩니다. 동의하시는 경우에만 게임 밸런스를
+      맞추기 위한 익명 플레이 통계를 보냅니다. 거절하셔도 게임은 똑같이 이용하실 수 있습니다.</p>
+    </div>
+
+    <h2>1. 게임 데이터는 기기에만 저장됩니다</h2>
+    <p>코인, 레벨, 보너스, 설정은 이용자 기기에만 저장되며 저희에게 전송되지 않습니다. 기기가 앱을
+    백업하는 경우(iCloud 또는 Google 백업) 이 저장 내용이 이용자 본인의 Apple·Google 계정 백업에
+    포함될 수 있습니다.</p>
+
+    <h2>2. 플레이 통계 — 동의하신 경우에만</h2>
+    <p>Jackpotopia를 처음 여실 때 익명 플레이 데이터 공유 여부를 여쭙습니다. <strong>동의하시기
+    전에는 아무것도 전송되지 않습니다.</strong> 앱은 수집이 꺼진 상태로 배포되므로 앱이 실행되는
+    첫 순간부터 이 원칙이 적용됩니다.</p>
+    <p>동의하시면 다음 이벤트를 기록합니다.</p>
+    <ul>
+      <li><code>spin_batch</code> — 25판마다의 요약: 총 베팅, 총 당첨, 평균·최대 당첨, 코인 잔액, 레벨, 머신</li>
+      <li><code>coins_earned</code> — 무료로 받거나 구매한 코인과 그 출처(시간 보너스, 일일 보너스, 레벨업 보상, 리필, 구매)</li>
+      <li><code>balance_zero</code> — 코인이 바닥난 시점: 레벨, 스핀 수, 설치 후 경과 시간(분)</li>
+      <li><code>store_open</code>, <code>offer_view</code>, <code>offer_tap</code> — 코인 상점을 연 것, 보인 특가, 누른 상품</li>
+      <li><code>iap_success</code> / <code>iap_fail</code> — 코인 구매 완료(상품, 지급한 코인) 또는 실패(취소, 오류, 지역 제한)</li>
+      <li><code>bet_change</code>, <code>machine_open</code>, <code>level_up</code> — 베팅 변경, 연 머신, 레벨업</li>
+      <li>현재 화면(로비, 머신, 상점), 레벨 구간(예: &ldquo;5–9&rdquo;), 구매 이력이 있는지 여부</li>
+    </ul>
+    <p>이와 함께 Google Analytics for Firebase가 자체 기본 이벤트(첫 실행, 세션 시작, 앱 사용 시간,
+    App Store·Google Play가 알려주는 인앱 구매 완료 — 상품, 가격, 통화)와 무작위로 만들어진 앱
+    인스턴스 식별자, 기기 모델·운영체제 버전, 앱 버전, 언어 설정, IP 주소로 추정한 국가를 기록합니다.
+    IP 주소 자체는 저장하지 않습니다.</p>
+
+    <h2>3. 구매</h2>
+    <p>코인 구매는 전적으로 Apple(App Store) 또는 Google(Google Play)이 처리합니다. 저희는 이름,
+    결제 카드, 청구지 주소를 볼 수 없습니다. 스토어는 앱에 구매한 상품과 거래 번호만 알려주며, 앱은
+    이를 코인 지급과 중복 지급 방지에만 씁니다. 이를 위해 최근 거래 번호를 기기에 보관합니다.</p>
+
+    <h2>4. 구매 전 지역 확인</h2>
+    <p>코인 구매는 일부 지역(현재 미국 워싱턴주)에서 이용하실 수 없습니다. 코인 상점을 여실 때 스토어
+    계정 국가가 미국이면, 앱이 Cloudflare Workers에서 운영하는 저희 서버에 접속 위치의 국가와 주를
+    묻습니다. 서버는 IP 주소로 이를 판단해 국가와 주만 돌려주며 아무것도 저장하지 않습니다. 결과는 기기에
+    24시간 보관됩니다. 이 확인은 법을 지키기 위해 필요하므로 플레이 통계 동의 여부와 관계없이 이루어지며,
+    미국 외 스토어 계정에서는 이루어지지 않습니다.</p>
+
+    <h2>5. 절대 수집하지 않는 것</h2>
+    <ul>
+      <li>이름, 이메일 주소, 전화번호, 계정</li>
+      <li>광고 식별자 — 빌드 단계에서 끄며, 게임에 광고가 없습니다</li>
+      <li>정확한 위치</li>
+      <li>연락처, 사진, 파일 등 기기 안의 다른 정보</li>
+    </ul>
+    <p>저희는 데이터를 판매하지 않으며 광고주와 공유하지 않습니다.</p>
+
+    <h2>6. 처리 위탁</h2>
+    <p>플레이 통계는 수탁자인 Google LLC가 Google Analytics for Firebase를 통해 처리합니다
+    (<a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase 개인정보 보호 및 보안</a>).
+    지역 확인은 Cloudflare, Inc.가 처리합니다
+    (<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare 개인정보처리방침</a>).
+    두 회사 모두 대한민국 및 이용자 국가 밖의 서버에서 데이터를 처리할 수 있습니다.</p>
+
+    <h2>7. 보관 기간</h2>
+    <p>플레이 이벤트 데이터는 14개월 뒤 자동으로 삭제됩니다. 특정 개인을 나타내지 않는 집계 통계(횟수,
+    평균 등)는 기한 없이 보관할 수 있습니다.</p>
+
+    <h2>8. 이용자의 선택</h2>
+    <p>언제든 바꾸실 수 있습니다. 머신을 열고 <strong>Info</strong>를 눌러 <strong>Share gameplay
+    data</strong>를 끄시면 즉시 수집이 멈춥니다. 거절하셔도 게임에는 아무 변화가 없습니다.</p>
+    <p>유럽경제지역 또는 영국에 계신 경우 플레이 통계 처리의 법적 근거는 이용자의 동의(GDPR 제6조
+    제1항 (a))이며 위 방법으로 철회하실 수 있습니다. 지역 확인은 법적 의무 준수와 현지 법령 준수에 관한
+    정당한 이익(제6조 제1항 (c), (f))에 근거합니다. 열람·정정·삭제를 요청하실 권리와 감독기관에 민원을
+    제기하실 권리가 있습니다. 다만 저희는 정보를 개인과 연결할 수 있는 식별자를 보유하지 않으므로 특정
+    이용자의 기록을 찾지 못할 수 있으며, 그 경우 수집을 끄시면 이후 전송이 중단됩니다. 캘리포니아 주민께:
+    저희는 CCPA에서 정의하는 개인정보의 판매 또는 공유를 하지 않습니다.</p>
+
+    <h2>9. 연령</h2>
+    <p>Jackpotopia는 성인(만 18세 이상)을 위한 소셜 카지노 게임입니다. 아동을 대상으로 하지 않으며
+    아동의 정보를 알면서 수집하지 않습니다. 아동이 정보를 보냈다고 판단되시면 연락 주시기 바랍니다.
+    확인 가능한 범위에서 삭제하겠습니다.</p>
+
+    <h2>10. 변경</h2>
+    <p>수집 항목이 달라지면 이 페이지를 갱신하고, 변경이 중대한 경우 게임 안에서 다시 여쭙겠습니다.</p>
+
+    <h2>11. 문의</h2>
+    <p>H&amp;H Games (HNH CO., LTD.), 대한민국<br>
+    <a href="mailto:contact@hnhgames.com">contact@hnhgames.com</a></p>
+  </section>
+
+  <footer>© 2026 HNH CO., LTD. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></footer>
+</main>
+
+<script>
+  const buttons = document.querySelectorAll(".lang button");
+  function show(lang){
+    document.getElementById("en").hidden = lang !== "en";
+    document.getElementById("ko").hidden = lang !== "ko";
+    document.documentElement.lang = lang;
+    buttons.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    try { localStorage.setItem("jackpotopia.privacy.lang", lang); } catch {}
+  }
+  buttons.forEach(b => b.addEventListener("click", () => show(b.dataset.lang)));
+  let start = "en";
+  try { start = localStorage.getItem("jackpotopia.privacy.lang") || start; } catch {}
+  if (start !== "ko" && start !== "en") start = "en";
+  if (start === "en" && (navigator.language || "").toLowerCase().startsWith("ko")) start = "ko";
+  show(start);
+</script>
+</body>
+</html>
