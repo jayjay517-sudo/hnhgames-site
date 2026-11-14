@@ -52,10 +52,6 @@
 </head>
 <body>
 <main>
-  <div class="lang">
-    <button type="button" data-lang="en" aria-pressed="true">English</button>
-    <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
-  </div>
 
   <!-- ─────────────── ENGLISH ─────────────── -->
   <section id="en">
@@ -106,71 +102,7 @@
     See our <a href="privacy.html">Privacy Policy</a>.</p>
   </section>
 
-  <!-- ─────────────── 한국어 ─────────────── -->
-  <section id="ko" hidden>
-    <h1>Jackpotopia — 지원</h1>
-    <p class="meta">H&amp;H Games (HNH CO., LTD.)</p>
-
-    <div class="note">
-      <p><a href="mailto:contact@hnhgames.com">contact@hnhgames.com</a>으로 메일 주시면 답장드리겠습니다.
-      구매 문제라면 Apple 또는 Google 영수증의 주문 번호를 함께 적어 주세요.</p>
-    </div>
-
-    <h2>자주 묻는 질문</h2>
-    <p><strong>코인을 샀는데 들어오지 않았어요.</strong><br>
-    게임을 완전히 껐다가 다시 열어 주세요. 끝나지 않은 구매는 게임이 시작될 때 지급됩니다. 그래도 들어오지
-    않으면 영수증의 주문 번호와 함께 메일 주세요.</p>
-
-    <p><strong>환불받을 수 있나요?</strong><br>
-    환불은 구매하신 스토어가 처리합니다. 아이폰·아이패드는
-    <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>에서, 안드로이드는
-    Google Play 주문 내역에서 요청하실 수 있습니다.</p>
-
-    <p><strong>왜 코인을 살 수 없나요?</strong><br>
-    일부 지역(현재 미국 워싱턴주 포함)에서는 구매할 수 없습니다. 무료 코인과 모든 머신은 그대로 이용하실 수 있습니다.</p>
-
-    <p><strong>코인이 바닥났어요.</strong><br>
-    무료 코인은 저절로 다시 생깁니다. 시간 보너스는 15분마다 차고, 일일 보너스는 매일 새로 받으며, 베팅할
-    코인이 없으면 무료 리필을 드립니다(설치 첫날 이후에는 리필 사이에 30분 기다림이 있습니다).</p>
-
-    <p><strong>기기를 바꿔도 코인을 지키려면요?</strong><br>
-    로비의 톱니바퀴(<strong>Settings</strong>)에서 안드로이드는 <strong>Sign in with Google</strong>, 아이폰·아이패드는
-    <strong>Sign in with Apple</strong>을 누르세요. 새 기기에서 같은 계정으로 로그인하시면 됩니다. 안드로이드와 아이폰
-    사이에는 옮길 수 없습니다.</p>
-
-    <p><strong>기기를 바꾸거나 다시 설치했더니 코인이 없어졌어요.</strong><br>
-    로그인해 두셨다면 같은 계정으로 다시 로그인하세요. 로그인하지 않으셨다면 진행은 예전 기기에만 있었으므로, iCloud
-    또는 Google 백업을 복원하면 돌아올 수 있으며 그렇지 않으면 복구해 드릴 수 없습니다.</p>
-
-    <p><strong>계정을 삭제하려면요?</strong><br>
-    설정 → <strong>Delete account</strong>. <a href="delete-account.html">계정 삭제 안내</a>도 참고해 주세요.</p>
-
-    <p><strong>실제 돈을 딸 수 있나요?</strong><br>
-    아니요. Jackpotopia는 오락용입니다. 코인은 현금 가치가 없고 현금화할 수 없습니다.</p>
-
-    <p><strong>플레이 데이터 공유를 끄려면요?</strong><br>
-    머신을 열고 <strong>Info</strong>를 눌러 <strong>Share gameplay data</strong>를 끄세요.
-    <a href="privacy.html">개인정보처리방침</a>도 참고해 주세요.</p>
-  </section>
-
   <footer>© 2026 HNH CO., LTD. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></footer>
 </main>
-
-<script>
-  const buttons = document.querySelectorAll(".lang button");
-  function show(lang){
-    document.getElementById("en").hidden = lang !== "en";
-    document.getElementById("ko").hidden = lang !== "ko";
-    document.documentElement.lang = lang;
-    buttons.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
-    try { localStorage.setItem("jackpotopia.support.lang", lang); } catch {}
-  }
-  buttons.forEach(b => b.addEventListener("click", () => show(b.dataset.lang)));
-  let start = "en";
-  try { start = localStorage.getItem("jackpotopia.support.lang") || start; } catch {}
-  if (start !== "ko" && start !== "en") start = "en";
-  if (start === "en" && (navigator.language || "").toLowerCase().startsWith("ko")) start = "ko";
-  show(start);
-</script>
 </body>
 </html>

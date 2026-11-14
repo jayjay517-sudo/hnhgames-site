@@ -52,10 +52,6 @@
 </head>
 <body>
 <main>
-  <div class="lang">
-    <button type="button" data-lang="en" aria-pressed="true">English</button>
-    <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
-  </div>
 
   <!-- ─────────────── ENGLISH ─────────────── -->
   <section id="en">
@@ -117,79 +113,7 @@
     <a href="https://www.begambleaware.org" rel="noopener">BeGambleAware.org</a>.</p>
   </section>
 
-  <!-- ─────────────── 한국어 ─────────────── -->
-  <section id="ko" hidden>
-    <h1>Jackpotopia — 이용약관</h1>
-    <p class="meta">최종 수정: 2026년 11월 3일 · H&amp;H Games (HNH CO., LTD.)</p>
-
-    <div class="note">
-      <p><strong>Jackpotopia는 오락용 게임입니다.</strong> 실제 돈을 거는 도박을 제공하지 않습니다.
-      코인은 현금 가치가 없으며 현금화하거나 돈·경품 등 가치 있는 것으로 바꿀 수 없습니다. 이 게임에서의
-      성공이 실제 도박에서의 승리를 뜻하지 않습니다.</p>
-    </div>
-
-    <h2>1. 이용 자격</h2>
-    <p>만 18세 이상, 또는 거주 지역의 성년 연령이 더 높다면 그 연령 이상이어야 합니다. 게임을 이용하시면
-    이 요건을 충족함을 확인하시는 것으로 봅니다.</p>
-
-    <h2>2. 가상 코인</h2>
-    <ul>
-      <li>코인은 게임 기능을 이용할 수 있는 제한된 권리이며, 이용자의 소유물이 아닙니다.</li>
-      <li>코인은 금전적 가치가 없으며 환급·양도·판매할 수 없습니다.</li>
-      <li>구매한 코인은 만료되지 않습니다. 게임 안에서 코인을 얻거나 쓰는 방식은 바뀔 수 있습니다.</li>
-      <li>코인은 기기에 저장됩니다. 로그인해 진행을 저장하지 않은 상태에서 백업 복원 없이 게임을 삭제하거나
-      기기를 초기화·교체하시면 코인이 사라질 수 있으며, 저희가 복구해 드릴 수 없습니다.</li>
-    </ul>
-
-    <h2>3. 구매</h2>
-    <p>코인 구매는 App Store 또는 Google Play를 통해 이루어지며 각 스토어의 약관이 적용됩니다. 스토어의
-    환불 정책이나 거주 지역 법률이 달리 정하지 않는 한 모든 구매는 확정됩니다. 환불 요청은 Apple 또는
-    Google이 처리합니다. 일부 지역(현재 미국 워싱턴주 포함)에서는 구매하실 수 없습니다.</p>
-
-    <h2>4. 공정한 이용</h2>
-    <p>부정행위, 게임 변조, 버그 악용, 불법적인 용도의 이용을 금지합니다. 코인이 생기는 버그를 발견하시면
-    알려 주시기 바랍니다.</p>
-
-    <h2>5. 서비스 제공</h2>
-    <p>저희는 게임을 즐겁고 안정적으로 유지하려 노력하지만, 게임은 &ldquo;있는 그대로&rdquo; 제공됩니다.
-    게임 또는 그 일부를 업데이트·변경·중단할 수 있습니다. 법이 허용하는 범위에서 간접 손해, 또는 청구 전
-    12개월간 이용자가 지불한 금액을 넘는 손해에 대해 책임지지 않습니다. 이 약관은 소비자 보호법상 제한할 수
-    없는 이용자의 권리를 제한하지 않습니다.</p>
-
-    <h2>6. 개인정보</h2>
-    <p>데이터 처리 방식은 <a href="privacy.html">개인정보처리방침</a>에 있습니다.</p>
-
-    <h2>7. 준거법</h2>
-    <p>이 약관은 대한민국 법을 따르며, 이용자가 거주하는 국가의 강행적 소비자 보호 규정에 따른 보호를
-    빼앗지 않습니다.</p>
-
-    <h2>8. 변경과 문의</h2>
-    <p>약관은 변경될 수 있으며 위 날짜가 최신 버전을 나타냅니다. 문의:
-    <a href="mailto:contact@hnhgames.com">contact@hnhgames.com</a></p>
-
-    <h2>9. 건전한 이용</h2>
-    <p>재미로 즐기시고 틈틈이 쉬어 주세요. 도박 문제로 어려움을 겪고 계시면 도움을 받으실 수 있습니다.
-    한국에서는 한국도박문제예방치유원 상담전화 1336, 미국에서는 1-800-GAMBLER로 연락하실 수 있습니다.</p>
-  </section>
-
   <footer>© 2026 HNH CO., LTD. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></footer>
 </main>
-
-<script>
-  const buttons = document.querySelectorAll(".lang button");
-  function show(lang){
-    document.getElementById("en").hidden = lang !== "en";
-    document.getElementById("ko").hidden = lang !== "ko";
-    document.documentElement.lang = lang;
-    buttons.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
-    try { localStorage.setItem("jackpotopia.terms.lang", lang); } catch {}
-  }
-  buttons.forEach(b => b.addEventListener("click", () => show(b.dataset.lang)));
-  let start = "en";
-  try { start = localStorage.getItem("jackpotopia.terms.lang") || start; } catch {}
-  if (start !== "ko" && start !== "en") start = "en";
-  if (start === "en" && (navigator.language || "").toLowerCase().startsWith("ko")) start = "ko";
-  show(start);
-</script>
 </body>
 </html>
