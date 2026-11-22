@@ -2,130 +2,260 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>H&amp;H Games</title>
-<meta name="description" content="H&amp;H Games">
-<link rel="icon" href="logo.png">
-<meta property="og:title" content="H&amp;H Games">
- 
-<!-- Open Graph Image Tags -->
-<meta property="og:image" content="logo.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>H&amp;H Games — Indie Developer &amp; Publisher</title>
+<meta name="description" content="H&H Games is an independent game developer and publisher from Korea, making puzzle and casino games for players worldwide.">
+<meta property="og:title" content="H&H Games — Indie Developer & Publisher">
+<meta property="og:image" content="https://hnhgames.com/logo.png">
+<link rel="icon" href="https://hnhgames.com/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-  :root { color-scheme: light dark; }
-  * { box-sizing: border-box; }
-  body {
-    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-    max-width: 46rem; margin: 0 auto; padding: 4rem 1.25rem 5rem;
-    color: #14342b; background: #fff;
-  }
-  @media (prefers-color-scheme: dark) {
-    body { color: #e7f6ef; background: #08201a; }
-    a { color: #7fdcb4; }
-    .card { background: #12332a; border-color: #2a4d40; }
-    .card h3 { color: #000 !important; }
-    .tag { background: #1c4a3a; color: #cbe2d8; }
-    footer { border-color: #2a4d40; }
-  }
-  header { text-align: center; margin-bottom: 3.5rem; }
-  /* Doubled the header image display size from 200px to 400px */
-  header img { width: 400px; height: auto; }
-  header p { color: #4b6a60; margin: 1rem 0 0; }
-  @media (prefers-color-scheme: dark) { header p { color: #8bab9f; } }
-  h2 { font-size: 1.05rem; letter-spacing: .04em; text-transform: uppercase;
-       color: #4b6a60; margin: 0 0 1rem; }
-  @media (prefers-color-scheme: dark) { h2 { color: #8bab9f; } }
-  .card {
-    display: flex; gap: 1.25rem; align-items: flex-start;
-    background: #f1faf6; border: 1px solid #cde3d9; border-radius: 14px;
-    padding: 1.25rem; margin-bottom: 2.5rem;
-  }
-  .card img { width: 76px; height: 76px; border-radius: 17px; flex-shrink: 0; }
-  .card h3 { margin: 0 0 .2rem; font-size: 1.15rem; color: #000; font-weight: 600; }
-  .card p { margin: .35rem 0 0; color: #2a4a3f; }
-  @media (prefers-color-scheme: dark) {
-    .card p { color: #b8dfd1; }
-  }
-  .tag { display: inline-block; background: #dcf3e9; color: #14342b;
-         font-size: .78rem; border-radius: 20px; padding: .15rem .6rem;
-         vertical-align: 2px; margin-left: .4rem; }
-  .links { margin-top: .8rem; font-size: .95rem; }
-  .links a { margin-right: 1rem; white-space: nowrap; }
-  a { color: #1f7d5c; }
-  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #cde3d9;
-           font-size: .9rem; color: #4b6a60; }
-  @media (prefers-color-scheme: dark) { footer { color: #8bab9f; } }
+/* VOICE: loud, playful, confident small studio
+   IDEA: a night arcade — glowing cabinets, each game a lit machine
+   PICTURE: full-bleed arcade photo with neon glow, photo-backed game cards
+   COLOUR+TYPE: ink #0b0912, hot pink #ff2e88, cyan #19e3ff, gold #ffc93c; Bungee + Outfit
+   LAYOUT: nav, hero, numbers strip, games, publishing, about, contact, footer */
+:root{--bg:#0b0912;--panel:#15111f;--ink:#f6f2ff;--mute:#b9b1cc;--pink:#ff2e88;--cyan:#19e3ff;--gold:#ffc93c;color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Outfit,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(5vw,16px)}
+h1,h2,h3{font-family:Bungee,Impact,sans-serif;font-weight:400;line-height:1.05;margin:0;text-wrap:balance}
+h2{font-size:clamp(32px,5vw,52px)}
+.lead{color:var(--mute);max-width:62ch;font-size:18px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(11,9,18,.78);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Bungee,sans-serif;font-size:20px}
+.brand img{width:36px;height:36px;border-radius:9px}
+.links{display:flex;gap:4px;flex-wrap:wrap}
+.links a{text-decoration:none;font-weight:600;padding:10px 14px;border-radius:999px;color:var(--mute)}
+.links a:hover,.links a:focus-visible{color:var(--ink);background:rgba(255,255,255,.08);outline:none}
+
+/* hero */
+.hero{position:relative;min-height:min(88vh,820px);display:grid;align-items:end;overflow:hidden;
+  background:radial-gradient(60% 70% at 75% 30%,#ff2e8855,transparent 70%),radial-gradient(50% 60% at 15% 80%,#19e3ff44,transparent 70%),#140d22}
+.hero .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62;transform:scale(1.06);animation:drift 18s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,9,18,.15) 0%,rgba(11,9,18,.35) 45%,var(--bg) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-block:120px 72px;width:100%}
+.tag{display:inline-flex;gap:8px;align-items:center;font-weight:600;padding:8px 16px;border-radius:999px;background:rgba(255,46,136,.16);border:1px solid #ff2e8877;color:#ffd1e5;margin-bottom:22px}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--pink);box-shadow:0 0 12px var(--pink)}
+.hero h1{font-size:clamp(44px,9vw,112px);letter-spacing:-.01em;max-width:13ch}
+.hero h1 span{display:block;background:linear-gradient(90deg,var(--pink),var(--gold) 55%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 24px #ff2e8866)}
+.hero p{font-size:clamp(18px,2vw,21px);max-width:56ch;color:#e3dcf2;margin:22px 0 32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:14px;font-weight:800;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn.main{background:var(--pink);color:#fff;box-shadow:0 8px 30px #ff2e8866}
+.btn.ghost{border:2px solid rgba(255,255,255,.35)}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);outline:none;box-shadow:0 10px 36px #19e3ff55}
+
+/* numbers */
+.nums{background:linear-gradient(90deg,#ff2e88,#7b2cff 50%,#19a7ff)}
+.nums .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding-block:28px}
+.num b{display:block;font-family:Bungee,sans-serif;font-size:clamp(28px,4vw,44px);line-height:1}
+.num span{font-weight:600;opacity:.9}
+
+section.band{padding:clamp(56px,8vw,110px) 0}
+
+/* games */
+.games{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:44px}
+.card{position:relative;border-radius:24px;overflow:hidden;background:var(--panel);border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 60px -18px var(--glow)}
+.card .art{position:relative;height:210px;background:var(--grad)}
+.card .art{overflow:visible}
+.card .art .clip{position:absolute;inset:0;overflow:hidden}
+.card .art img.bg{width:100%;height:100%;object-fit:cover}
+.card .art.shot .clip::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,var(--panel))}
+.card .art.color .clip::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.35),transparent 45%),repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 2px,transparent 2px 18px)}
+.card .art .big{position:absolute;right:-24px;top:-14px;width:230px;height:230px;border-radius:52px;opacity:.28;transform:rotate(-12deg)}
+.card .icon{position:absolute;left:22px;bottom:-34px;z-index:2;width:92px;height:92px;border-radius:22px;border:3px solid var(--panel);box-shadow:0 10px 30px rgba(0,0,0,.5);background:#222}
+.card .body{padding:50px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card h3{font-size:26px}
+.card p{margin:0;color:var(--mute)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.08)}
+.chip.hot{background:var(--glow);color:#140d22}
+.stores{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.stores a{display:inline-flex;align-items:center;gap:7px;min-height:46px;padding:5px 11px 5px 9px;border-radius:11px;background:#000;border:1px solid rgba(255,255,255,.25);text-decoration:none;font-weight:800;font-size:14.5px;line-height:1.1;transition:border-color .2s,transform .2s}
+.stores a:hover,.stores a:focus-visible{border-color:var(--glow);transform:translateY(-2px);outline:none}
+.stores svg{width:21px;height:21px;flex:none}
+.stores small{display:block;font-size:11px;font-weight:400;opacity:.8}
+.card .more{display:flex;gap:6px 16px;flex-wrap:wrap;padding-top:8px;border-top:1px solid rgba(255,255,255,.08)}
+.card .more a{font-size:14px;font-weight:600;color:var(--mute);text-decoration:none;padding:8px 0}
+.card .more a:hover{color:var(--ink)}
+
+/* publishing */
+.pub{background:radial-gradient(70% 90% at 100% 0,#19e3ff22,transparent 60%),#100c1a}
+.pubgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;gap:14px}
+.mosaic div{border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#ff2e88,#19e3ff)}
+.mosaic div:first-child{grid-row:span 2}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.offer{display:grid;gap:14px;margin:28px 0 32px;padding:0;list-style:none}
+.offer li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start}
+.offer svg{width:44px;height:44px;padding:10px;border-radius:12px;background:rgba(25,227,255,.12);stroke:var(--cyan);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.offer b{display:block}
+.offer span{color:var(--mute)}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.about .pic{border-radius:24px;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#7b2cff,#ff2e88)}
+.about .pic img{width:100%;height:100%;object-fit:cover}
+
+/* contact */
+.contact{position:relative;overflow:hidden;text-align:center;background:#1a0f26}
+.contact img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.18;filter:blur(2px)}
+.contact::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(11,9,18,.72),var(--bg) 85%)}
+.contact .lead{color:#e3dcf2}
+.contact .wrap{position:relative;z-index:2}
+.mail{display:inline-block;font-family:Bungee,sans-serif;font-size:clamp(22px,4.5vw,44px);margin:18px 0 26px;text-decoration:none;color:var(--gold);text-shadow:0 0 30px #ffc93c66;overflow-wrap:anywhere}
+
+footer{border-top:1px solid rgba(255,255,255,.08);padding:28px 0;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.credit{font-size:13px;opacity:.7}
+
+@keyframes drift{to{transform:scale(1.14) translate(-1.5%,-1%)}}
+@media(prefers-reduced-motion:reduce){.hero .photo{animation:none}.card,.btn{transition:none}}
+@media(max-width:960px){.games{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.pubgrid,.about{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:640px){.games{grid-template-columns:minmax(0,1fr)}.nums .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.links a{padding:10px 10px}.mosaic{grid-template-rows:150px 150px}}
 </style>
 </head>
 <body>
- 
-<header>
-  <img src="logo.png" alt="H&amp;H Games">
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="https://hnhgames.com/logo.png" alt="">H&amp;H Games</a>
+    <div class="links">
+      <a href="#games">Games</a>
+      <a href="#publishing">Publishing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <img class="photo" src="https://images.unsplash.com/photo-1514439827219-9137a0b99245?auto=format&fit=crop&w=2000&q=75" alt="" onerror="this.remove()">
+  <div class="wrap">
+    <div class="tag"><i></i>Indie developer &amp; publisher · Seoul, Korea</div>
+    <h1>Small studio. <span>Big play.</span></h1>
+    <p>H&amp;H Games makes puzzle and casino games for players around the world, and publishes games from developers we believe in.</p>
+    <div class="cta">
+      <a class="btn main" href="#games">See our games</a>
+      <a class="btn ghost" href="#publishing">Publish with us</a>
+    </div>
+  </div>
 </header>
- 
-<h2>Our games</h2>
- 
-<div class="card">
-  <img src="sudoku/logo.png" alt="Sudoku Master icon">
-  <div>
-    <h3>Sudoku Master <span class="tag">iOS · Android</span></h3>
-    <p>
-      A clean, classic sudoku with six difficulty levels, pencil marks, hints
-      and per-level statistics. Every puzzle is checked to have exactly one
-      solution, so you never have to guess. Works fully offline in twelve
-      languages.
-    </p>
-    <p class="links">
-      <a href="sudoku/privacy.html">Privacy policy</a>
-      <a href="sudoku/support.html">Support &amp; FAQ</a>
-    </p>
+
+<div class="nums">
+  <div class="wrap">
+    <div class="num"><b>3</b><span>titles</span></div>
+    <div class="num"><b>12</b><span>languages</span></div>
+    <div class="num"><b>1,114</b><span>Owldoku levels</span></div>
+    <div class="num"><b>15+</b><span>years in global games</span></div>
   </div>
 </div>
- 
-<div class="card">
-  <img src="owldoku/logo.png" alt="Owldoku icon">
-  <div>
-    <h3>Owldoku <span class="tag">iOS · Android</span></h3>
-    <p>
-      A 614-level puzzle journey where each board builds a new solving technique.
-      Hints teach by example, not formula. The difficulty curve self-adjusts
-      based on what players struggle with. Fully offline, works in any language.
-    </p>
-    <p class="links">
-      <a href="owldoku/privacy.html">Privacy policy</a>
-    </p>
+
+<section class="band" id="games">
+  <div class="wrap">
+    <h2>Our games</h2>
+    <p class="lead">Easy to pick up, hard to put down. Built small, polished hard, shipped worldwide.</p>
+    <div class="games" id="gameList"></div>
   </div>
-</div>
- 
-<div class="card">
-  <img src="jackpotopia/logo.png" alt="Jackpotopia icon">
-  <div>
-    <h3>Jackpotopia <span class="tag">Coming soon</span></h3>
-    <p>
-      Free Vegas-style slots. Every machine open from day one, free spins with giant symbols, a Bonus Wheel,
-      Hold &amp; Spin jackpots and free coins every 15 minutes. For adults (18+),
-      entertainment only: no real money gambling and no real prizes.
-    </p>
-    <p class="links">
-      <a href="jackpotopia/">About</a>
-      <a href="jackpotopia/privacy.html">Privacy policy</a>
-      <a href="jackpotopia/terms.html">Terms</a>
-      <a href="jackpotopia/support.html">Support</a>
-    </p>
+</section>
+
+<section class="band pub" id="publishing">
+  <div class="wrap pubgrid">
+    <div>
+      <h2>We publish, too.</h2>
+      <p class="lead">Before H&amp;H, our team spent over fifteen years in global business development, publishing and IP licensing across PC (Steam), console and mobile. Now we bring that to indie teams.</p>
+      <ul class="offer">
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><div><b>Global launch</b><span>Store setup, localization and market selection for worldwide release.</span></div></li>
+        <li><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg><div><b>Live operations</b><span>Analytics, monetization design and update planning after launch.</span></div></li>
+        <li><svg viewBox="0 0 24 24"><path d="M8 11V7a4 4 0 0 1 8 0v4M5 11h14v10H5z"/></svg><div><b>Partnerships &amp; licensing</b><span>Deals, IP licensing and platform relationships across Asia and the West.</span></div></li>
+      </ul>
+      <a class="btn main" href="mailto:contact@hnhgames.com?subject=Publishing%20inquiry">Pitch your game</a>
+    </div>
+    <div class="mosaic">
+      <div><img src="https://images.unsplash.com/photo-1661347561879-c9ab77bac89f?auto=format&fit=crop&w=900&q=75" alt="Player with headphones at a computer" onerror="this.remove()"></div>
+      <div><img src="https://images.unsplash.com/photo-1758874383909-9b46bfb2dc65?auto=format&fit=crop&w=700&q=75" alt="Player with headphones gaming on a smartphone" onerror="this.remove()"></div>
+      <div><img src="https://images.unsplash.com/photo-1738830260465-6d1aead840f1?auto=format&fit=crop&w=700&q=75" alt="Playing a game on a phone" onerror="this.remove()"></div>
+    </div>
   </div>
-</div>
- 
-<h2>Contact</h2>
-<p>
-  <a href="mailto:contact@hnhgames.com">contact@hnhgames.com</a>
-</p>
- 
+</section>
+
+<section class="band" id="about">
+  <div class="wrap about">
+    <div class="pic"><img src="https://images.unsplash.com/photo-1513807762437-8c8dee6b3776?auto=format&fit=crop&w=1100&q=75" alt="Red neon Play sign" onerror="this.remove()"></div>
+    <div>
+      <h2>Indie by choice.</h2>
+      <p class="lead">We are a small, independent studio based in Seoul. We keep teams tiny and decisions fast, and we sweat the details players feel: clean rules, fair economies, and games that run beautifully on every phone and tablet.</p>
+      <p class="lead">Every game we make ships in multiple languages from day one, because our players are everywhere.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band contact" id="contact">
+  <img class="bg" src="https://images.unsplash.com/photo-1546443046-ed1ce6ffd1ab?auto=format&fit=crop&w=1800&q=70" alt="" onerror="this.remove()">
+  <div class="wrap">
+    <h2>Let's play together.</h2>
+    <p class="lead" style="margin:16px auto 0">Players, partners, press or developers looking for a publisher — say hello.</p>
+    <a class="mail" href="mailto:contact@hnhgames.com">contact@hnhgames.com</a><br>
+    <a class="btn ghost" href="mailto:contact@hnhgames.com">Send us an email</a>
+  </div>
+</section>
+
 <footer>
-  © 2026 H&amp;H Games
+  <div class="wrap">
+    <span>© 2026 H&amp;H Games (HNH CO., LTD.) · Seoul, Korea</span>
+    <span class="credit">Photos: Unsplash</span>
+  </div>
 </footer>
- 
+
+<script>
+{
+  const games=[
+    {name:"Jackpotopia",icon:"https://hnhgames.com/jackpotopia/logo.png",shot:"jackpotopia/feature.jpg",
+     grad:"linear-gradient(135deg,#6a1bff,#ff2e88 60%,#ffc93c)",glow:"#ffc93c",
+     text:"Vegas-style slots with every machine unlocked from day one. Free spins, a Bonus Wheel, Hold & Spin jackpots and free coins every 15 minutes.",
+     chips:[["Out now",1],["18+"]],
+     ios:"https://apps.apple.com/us/app/jackpotopia/id6806294622",play:"https://play.google.com/store/apps/details?id=com.hnhgames.jackpotopia",
+     note:"For adults 18+. Entertainment only — no real-money gambling or prizes.",
+     links:[["About","https://hnhgames.com/jackpotopia/"],["Privacy","https://hnhgames.com/jackpotopia/privacy.html"],["Terms","https://hnhgames.com/jackpotopia/terms.html"],["Support","https://hnhgames.com/jackpotopia/support.html"]]},
+    {name:"Owldoku",icon:"https://hnhgames.com/owldoku/logo.png",
+     grad:"linear-gradient(135deg,#ff9a1f,#ff2e88)",glow:"#ff9a1f",
+     text:"A puzzle journey of 1,114 levels. Each board teaches a new trick, hints show you how, and an owl league keeps you climbing.",
+     chips:[["Out now",1]],
+     ios:"https://apps.apple.com/us/app/owldoku-logic-puzzles/id6813404259",play:"https://play.google.com/store/apps/details?id=com.hnhgames.owldoku",
+     links:[["Privacy","https://hnhgames.com/owldoku/privacy.html"]]},
+    {name:"Sudoku Master",icon:"https://hnhgames.com/sudoku/logo.png",
+     grad:"linear-gradient(135deg,#19e3ff,#3a5bff)",glow:"#19e3ff",
+     text:"Classic sudoku done right: six difficulty levels, pencil marks, hints and stats. Every puzzle has exactly one solution. Fully offline, 12 languages.",
+     chips:[["Out now",1]],
+     ios:"https://apps.apple.com/us/app/sudoku-master-offline-puzzle/id6801860424",play:"https://play.google.com/store/apps/details?id=com.jaygame.sudokumaster",
+     links:[["Privacy","https://hnhgames.com/sudoku/privacy.html"],["Support & FAQ","https://hnhgames.com/sudoku/support.html"]]}
+  ];
+  const apple='<svg viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.1-1.2 2.9-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.4-1-2.4-3.9zM14 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>';
+  const play='<svg viewBox="0 0 24 24"><path fill="#19e3ff" d="M3.6 2.3 13.4 12l-9.8 9.7c-.3-.2-.6-.6-.6-1.1V3.4c0-.5.3-.9.6-1.1z"/><path fill="#ffc93c" d="m16.8 8.6-3.4 3.4 3.4 3.4 3.8-2.2c.9-.5.9-1.9 0-2.4z"/><path fill="#2bd67b" d="M3.6 2.3c.4-.3 1-.3 1.5 0l11.7 6.3-3.4 3.4z"/><path fill="#ff2e88" d="m13.4 12 3.4 3.4-11.7 6.3c-.5.3-1.1.3-1.5 0z"/></svg>';
+  const u=id=>`https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=70`;
+  document.getElementById('gameList').innerHTML=games.map(g=>`
+    <article class="card" style="--grad:${g.grad};--glow:${g.glow}">
+      <div class="art ${g.shot?'shot':'color'}"><div class="clip">${g.shot?`<img class="bg" src="${g.shot}" alt="${g.name} key art">`:`<img class="big" src="${g.icon}" alt="">`}</div>
+        <img class="icon" src="${g.icon}" alt="${g.name} icon"></div>
+      <div class="body">
+        <h3>${g.name}</h3>
+        <div class="chips">${g.chips.map(([c,h])=>`<span class="chip${h?' hot':''}">${c}</span>`).join('')}</div>
+        <p>${g.text}</p>
+        <div class="stores"><a href="${g.ios}" target="_blank" rel="noopener">${apple}<span><small>Download on the</small>App Store</span></a><a href="${g.play}" target="_blank" rel="noopener">${play}<span><small>Get it on</small>Google Play</span></a></div>
+        ${g.note?`<p style="font-size:13px">${g.note}</p>`:''}
+        <div class="more">${g.links.map(([t,h])=>`<a href="${h}">${t}</a>`).join('')}</div>
+      </div>
+    </article>`).join('');
+}
+</script>
 </body>
 </html>
